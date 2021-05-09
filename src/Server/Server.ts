@@ -6,6 +6,9 @@ import {ProcessNote} from '../Note/ProcessNote';
 import chalk = require('chalk');
 import fs = require('fs');
 
+/**
+ *  ResponseType . Tipo de dato para la respuesta del servidor.
+ */
 export type ResponseType = {
     type: 'add' | 'modify' | 'remove' | 'user-remove' | 'read' | 'list' | 'error';
     success: boolean;
@@ -13,6 +16,9 @@ export type ResponseType = {
 }
 
 function main(): void {
+    /**
+     * Creamos la conexión del servidor
+     */
     const server = net.createServer((connection) => {
         console.log(chalk.green('\nA client has connected.'));
         const message = new MessageEventEmitter(connection, "server");
@@ -21,6 +27,9 @@ function main(): void {
                 type: 'error',
                 success: false,
             };
+            /**
+             *  Procesamos el tipo de petición del servidor.
+             */
             switch (argv.type) {
                 case 'add':
                     if (typeof argv.user === 'string' && typeof argv.title === 'string' && typeof argv.body === 'string' && typeof argv.color === 'string') {
@@ -170,9 +179,15 @@ function main(): void {
             });
         });
 
+        /**
+         * Evento "close" . Se emite cuando el cliente se desconecta del servidor.
+         */
         connection.on('close', () => {
             console.log(chalk.green('\nA client has disconnected.'));
         })
+    /**
+     * Servidor abierto a la escucha en el puerto 60300.
+     */
     }).listen(60300, () => {
         console.log(chalk.magenta('Waiting for clients to connect.'));
     })

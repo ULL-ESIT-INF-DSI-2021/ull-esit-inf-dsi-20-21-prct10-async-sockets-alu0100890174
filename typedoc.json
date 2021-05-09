@@ -2,8 +2,8 @@
     "entryPoints": [
     "./src/Client/Client.ts",
     "./src/Server/Server.ts",
-    "./src/Notes/Note.ts",
-    "./src/Notes/ProcessNote.ts",
+    "./src/Note/Note.ts",
+    "./src/Note/ProcessNote.ts",
     "./src/MessageEventEmiiter.ts"
     ],
     "out": "./docs/typedoc"

@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 import {EventEmitter} from 'events';
 
+/**
+ * MessageEventEmitter . Clase dedicada a la comunicación entre el 
+ * Servidor y el Cliente, resuelve el problema de los mensajes por trazas.
+ * Emite un evento de tipo para:
+ *    * 'request'  => mensaje para comunicarse con el servidor.
+ *    * 'response' => mensaje para comunicarse con el cliente.
+ */
 export class MessageEventEmitter extends EventEmitter {
+  /**
+   * @param connection objeto de tipo EventEmitter 
+   * @param srcMessage "server" / "client"
+   */
   constructor(connection: EventEmitter, srcMessage: string) {
     super();
 

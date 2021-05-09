@@ -4,6 +4,9 @@ import * as net from 'net';
 import chalk = require('chalk');
 import yargs = require('yargs');
 
+/**
+ *  ResponseType . Tipo de dato para la petición del cliente.
+ */
 export type RequestType = {
     type: 'add' | 'modify' | 'remove' | 'user-remove' | 'read' | 'list';
     user?: string;
@@ -13,12 +16,21 @@ export type RequestType = {
 }
 
 function main(): void {
+    /** 
+     * Comprobamos parametros de la petición cliente.
+     */
     if (process.argv.length < 3) {
         console.log('A parameter is missing.');
     } else {
+        /**
+         * Creamos conexión con el servidor en el puerto 60300.
+         */
         const client = net.connect({port: 60300});
         const message = new MessageEventEmitter(client, "client");
         message.on('response', (argv) => {
+            /**
+             * Procesamos la respuesta del servidor.
+             */
             switch (argv.type) {
                 case 'add':
                     if (argv.success == true){
@@ -327,7 +339,6 @@ function main(): void {
             },
         });
     }
-
     yargs.parse();
 }
 
