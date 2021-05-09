@@ -2,7 +2,7 @@ import 'mocha';
 import {expect} from 'chai';
 import {EventEmitter} from 'events';
 import {MessageEventEmitter} from '../src/MessageEventEmitter';
-import {Note} from '../src/Notes/Note';
+import {Note} from '../src/Note/Note';
 import {RequestType} from '../src/Client/Client';
 import {ResponseType} from '../src/Server/Server';
 

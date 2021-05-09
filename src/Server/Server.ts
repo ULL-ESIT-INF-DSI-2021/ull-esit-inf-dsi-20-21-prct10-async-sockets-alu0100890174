@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import {MessageEventEmitter} from '../MessageEventEmitter';
 import * as net from 'net';
-import {Note} from '../Notes/Note';
-import {ProcessNote} from '../Notes/ProcessNote';
+import {Note} from '../Note/Note';
+import {ProcessNote} from '../Note/ProcessNote';
 import chalk = require('chalk');
 import fs = require('fs');
 

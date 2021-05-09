@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {EventEmitter} from 'events';
 
 export class MessageEventEmitter extends EventEmitter {

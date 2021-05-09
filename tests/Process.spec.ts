@@ -1,7 +1,7 @@
 import 'mocha';
 import {expect} from 'chai';
-import {Note} from '../src/Notes/Note';
-import {ProcessNote} from '../src/Notes/ProcessNote';
+import {Note} from '../src/Note/Note';
+import {ProcessNote} from '../src/Note/ProcessNote';
 const fs = require('fs');
 
 describe('Testing "ProcessNote Class"', () => {
