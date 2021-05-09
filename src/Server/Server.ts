@@ -6,7 +6,7 @@ import {ProcessNote} from '../Notes/ProcessNote';
 import chalk = require('chalk');
 import fs = require('fs');
 
-type ResponseType = {
+export type ResponseType = {
     type: 'add' | 'modify' | 'remove' | 'user-remove' | 'read' | 'list' | 'error';
     success: boolean;
     notes?: Note[];

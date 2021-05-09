@@ -4,7 +4,7 @@ import * as net from 'net';
 import chalk = require('chalk');
 import yargs = require('yargs');
 
-type RequestType = {
+export type RequestType = {
     type: 'add' | 'modify' | 'remove' | 'user-remove' | 'read' | 'list';
     user?: string;
     title?: string;
