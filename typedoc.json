@@ -1,6 +1,10 @@
 {
     "entryPoints": [
-    "./src/ejercicio-1/ejercicio-1.ts"
+    "./src/Client/Client.ts",
+    "./src/Server/Server.ts",
+    "./src/Notes/Note.ts",
+    "./src/Notes/ProcessNote.ts",
+    "./src/MessageEventEmiiter.ts"
     ],
     "out": "./docs/typedoc"
 }
