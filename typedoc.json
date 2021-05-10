@@ -4,7 +4,7 @@
     "./src/Server/Server.ts",
     "./src/Note/Note.ts",
     "./src/Note/ProcessNote.ts",
-    "./src/MessageEventEmiiter.ts"
+    "./src/MessageEventEmitter.ts"
     ],
     "out": "./docs/typedoc"
 }
